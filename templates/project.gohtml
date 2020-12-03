@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>{{.Link}}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="go-import" content="{{.Link}} git {{.Git}}">
+    <meta name="go-source" content="{{.Link}} {{.Sources}}">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body>
+
+    <span class="wrapper center">
+        <h3>
+            Vanity Go Import Paths
+        </h3>
+
+        <div>
+            <table width="100%">
+                <tr>
+                    <td title="{{if .Private}}Private{{else}}Public{{end}}">
+                        {{if .Private}}
+                            <img class="svg" src="/assets/icons/lock.svg" alt="Private">
+                        {{else }}
+                            <img class="svg" src="/assets/icons/unlocked.svg" alt="Public">
+                        {{end}}
+                    </td>
+                    <td>
+                        <code>
+                            go get {{.Link}}
+                        </code>
+                    </td>
+                    <td>
+                        {{if .About.URL }}
+                        <a href="{{.About.URL}}" title="{{if .About.Title}}{{.About.Title}}{{else}}{{.About.URL}}{{end}}" target="_blank" rel="noopener">
+                            Website
+                        </a>
+                        {{else}}
+                        &nbsp;
+                        {{end}}
+                    </td>
+                    <td>
+                        <a href="{{.Git}}" target="_blank" rel="noopener">
+                            {{.GitHost}}
+                        </a>
+                    </td>
+                    <td>
+                        <a href="https://pkg.go.dev/{{.Link}}" target="_blank" rel="noopener">
+                            pkg.go.dev
+                        </a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <br />
+        <a href="/">Home</a>
+    </span>
+
+    <hr />
+    <div class="gen">
+        Generated with <a href="{{.Generator.URL}}" target="_blank" rel="noopener">{{.Generator.Name}}</a>
+        (v{{.Generator.Version}}) by <a href="{{.Generator.Author.URL}}" target="_blank"
+            rel="noopener">{{.Generator.Author.Name}}</a>
+    </div>
+</body>
+
+</html>

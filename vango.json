@@ -1,0 +1,74 @@
+{
+    "packages": [
+        {
+            "private": false,
+            "name": "vango-example",
+            "path": "LouisT/vango-example",
+            "git": "https://github.com/{{.Path}}",
+            "sources": [
+                "https://github.com/{{.Path}}",
+                "https://github.com/{{.Path}}/tree/master{/dir}",
+                "https://github.com/{{.Path}}/blob/master{/dir}/{file}#L{line}"
+            ],
+            "about": {
+                "url": "https://lou.ist/",
+                "description": "This is an example package; used to demonstrate vercel-vango with GitHub."
+            }
+        },
+        {
+            "private": false,
+            "name": "vango-example-gitlab",
+            "path": "LouisT/vango-example",
+            "git": "https://gitlab.com/{{.Path}}",
+            "sources": [
+                "https://gitlab.com/{{.Path}}",
+                "https://gitlab.com/{{.Path}}/-/blob/master{/dir}",
+                "https://gitlab.com/{{.Path}}/-/blob/master{/dir}/{file}#L{line}"
+            ],
+            "about": {
+                "url": "https://lou.ist/",
+                "description": "This is an example package; used to demonstrate vercel-vango with GitLab."
+            }
+        },
+        {
+            "private": false,
+            "name": "vango-example-bitbucket",
+            "path": "Loueypoo/vango-example",
+            "git": "https://bitbucket.org/{{.Path}}",
+            "sources": [
+                "https://bitbucket.org/{{.Path}}",
+                "https://bitbucket.org/{{.Path}}/src/master{/dir}",
+                "https://bitbucket.org/{{.Path}}/src/master{/dir}/{file}#lines-{line}"
+            ],
+            "about": {
+                "url": "https://lou.ist/",
+                "description": "This is an example package; used to demonstrate vercel-vango with Bitbucket."
+            }
+        },
+        {
+            "private": true,
+            "name": "vango-example-private",
+            "path": "LouisT/vango-example-private",
+            "git": "https://example.com/{{.Path}}",
+            "host": "FakeHost",
+            "sources": [
+                "https://example.com/{{.Path}}",
+                "https://example.com/{{.Path}}/tree/master{/dir}",
+                "https://example.com/{{.Path}}/blob/master{/dir}/{file}#L{line}"
+            ],
+            "about": {
+                "url": "https://lou.ist/",
+                "description": "This is a private example package; used to demonstrate vercel-vango and private packages."
+            }
+        }
+    ],
+    "generator": {
+        "name": "vercel-vango",
+        "version": "0.0.1",
+        "url": "https://github.com/LouisT/vercel-vango",
+        "author": {
+            "name": "Louis T.",
+            "url": "https://lou.ist/"
+        }
+    }
+}

@@ -1,0 +1,119 @@
+body {
+    margin: 0 auto;
+    font-family: "Open Sans", sans-serif;
+    line-height: 1;
+}
+
+hr {
+    margin-top: 50px;
+    width: 200px;
+}
+
+.gen {
+    text-align: center;
+}
+
+img.icon {
+    width: 48px;
+}
+
+img.svg {
+    width: 16px;
+}
+
+code {
+    padding: 5px;
+    color: white;
+    background: #bbb;
+}
+
+.wrapper {
+    margin: 20px;
+    display: block;
+    text-align: center;
+}
+
+.wrapper div {
+    width: 75%;
+    display: inline-block;
+}
+
+table {
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+}
+
+a {
+    color: #555;
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+}
+
+table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    border-bottom: 3px solid #ddd;
+    padding: .35em;
+    display: block;
+    margin-bottom: .625em;
+}
+
+.wrapper.clickable tr {
+    cursor: pointer;
+}
+
+table th,
+table td {
+    padding: .625em;
+    text-align: center;
+    line-height: 0;
+}
+
+table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+}
+
+@media screen and (max-width: 1024px) {
+    table {
+        border: 0;
+    }
+
+    table caption {
+        font-size: 1.3em;
+    }
+
+    table tr {
+        border-bottom: 3px solid #ddd;
+        display: block;
+        margin-bottom: .625em;
+    }
+
+    table td {
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 1em;
+    }
+
+    table td:last-child {
+        border-bottom: 0;
+    }
+
+    table th,
+    table td {
+        line-height: 1.25;
+    }
+
+}

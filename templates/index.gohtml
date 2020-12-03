@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Vanity Go Import Paths</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/styles.css">
+</head>
+
+<body>
+    <span class="wrapper clickable">
+        <h3>
+            Vanity Go Import Paths
+        </h3>
+
+        <div>
+            <table>
+                {{range .Packages}}
+                <tr onclick="window.location='/{{.Name}}';">
+                    <td><img src="{{if .Icon}}{{.Icon}}{{else}}/assets/icons/image.svg{{end}}" alt="{{.Name}}" class="icon" /></td>
+                    <td><a href="/{{.Name}}">{{.Name}}</a></td>
+                    <td>{{.About.Description}}</td>
+                </tr>
+                {{end}}
+            </table>
+        </div>
+    </span>
+
+    <hr />
+    <div class="gen">
+        Generated with <a href="{{.Generator.URL}}" target="_blank" rel="noopener">{{.Generator.Name}}</a>
+        (v{{.Generator.Version}}) by <a href="{{.Generator.Author.URL}}" target="_blank"
+            rel="noopener">{{.Generator.Author.Name}}</a>
+    </div>
+</body>
+
+</html>

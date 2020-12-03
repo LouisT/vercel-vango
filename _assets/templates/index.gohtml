@@ -4,7 +4,7 @@
 <head>
     <title>Vanity Go Import Paths</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles.css">
+    <link rel="stylesheet" href="/_assets/styles.css">
 </head>
 
 <body>
@@ -17,7 +17,7 @@
             <table>
                 {{range .Packages}}
                 <tr onclick="window.location='/{{.Name}}';">
-                    <td><img src="{{if .Icon}}{{.Icon}}{{else}}/assets/icons/image.svg{{end}}" alt="{{.Name}}" class="icon" /></td>
+                    <td><img src="{{if .Icon}}{{.Icon}}{{else}}/_assets/icons/image.svg{{end}}" alt="{{.Name}}" class="icon" /></td>
                     <td><a href="/{{.Name}}">{{.Name}}</a></td>
                     <td>{{.About.Description}}</td>
                 </tr>

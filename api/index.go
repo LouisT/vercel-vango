@@ -79,8 +79,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 			if strings.EqualFold(vango.Packages[i].Name, name) {
 				pkg := vango.Packages[i]
 				tmpl := map[bool]string{
-					true:  "templates/forward.gohtml",
-					false: "templates/project.gohtml",
+					true:  "_assets/templates/forward.gohtml",
+					false: "_assets/templates/project.gohtml",
 				}[r.URL.Query().Get("go-get") == "1"]
 				path := struct{ Path string }{Path: pkg.Path}
 
@@ -114,7 +114,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 		w.WriteHeader(http.StatusNotFound)
 		fmt.Fprintf(w, "404 - Page Not Found")
 	} else {
-		template.Must(template.New("webpage").Parse(GetAsset(r, "templates/index.gohtml"))).Execute(w, vango)
+		template.Must(template.New("webpage").Parse(GetAsset(r, "_assets/templates/index.gohtml"))).Execute(w, vango)
 	}
 }
 
